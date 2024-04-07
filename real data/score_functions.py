@@ -87,7 +87,6 @@ def h_opt_gum(Ys, delta0=0.2,theo=True, alpha=0.05):
     # Compute critical values
     Ys = np.array(Ys)
     check_points = np.arange(1, 1+Ys.shape[-1])
-    # np.log(Ys**(1/(1-delta0)-1)+Ys**(1/delta0-1))
 
     def f(r, delta):
         inte_here = np.floor(1/(1-delta))
@@ -98,7 +97,7 @@ def h_opt_gum(Ys, delta0=0.2,theo=True, alpha=0.05):
     if theo:
         mu = quad(lambda x: f(x, delta0), 0, 1,epsabs = 1e-10,epsrel=1e-10)
         EX2 = quad(lambda x: f(x, delta0)**2, 0, 1,epsabs = 1e-10,epsrel=1e-10)
-        # print(delta0,"acc",mu[1],EX2[1])
+
         mu, EX2 = mu[0], EX2[0]
         Var = EX2 - mu**2
 
