@@ -11,11 +11,11 @@ import argparse
 ## Make sure the following configuration is the same used in generating watermarked samples
 parser = argparse.ArgumentParser(description="Experiment Settings")
 
-# parser.add_argument('--method',default="gumbel",type=str)
-parser.add_argument('--method',default="transform",type=str)
+parser.add_argument('--method',default="gumbel",type=str)
+# parser.add_argument('--method',default="transform",type=str)
 
-# parser.add_argument('--model',default="facebook/opt-1.3b",type=str)
-parser.add_argument('--model',default="princeton-nlp/Sheared-LLaMA-2.7B",type=str)
+parser.add_argument('--model',default="facebook/opt-1.3b",type=str)
+# parser.add_argument('--model',default="princeton-nlp/Sheared-LLaMA-2.7B",type=str)
 # parser.add_argument('--model',default="huggyllama/llama-7b",type=str)
 
 parser.add_argument('--seed_way',default="skipgram_prf",type=str)

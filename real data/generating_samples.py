@@ -18,8 +18,8 @@ results = defaultdict(dict)
 
 parser = argparse.ArgumentParser(description="Experiment Settings")
 
-# parser.add_argument('--method',default="gumbel",type=str)
-parser.add_argument('--method',default="transform",type=str)
+parser.add_argument('--method',default="gumbel",type=str)
+# parser.add_argument('--method',default="transform",type=str)
 # parser.add_argument('--method',default="raw",type=str)
 
 parser.add_argument('--model',default="facebook/opt-1.3b",type=str)
