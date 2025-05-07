@@ -6,11 +6,15 @@ This repository contains the codes for the paper
 
 If you find this code useful in your research, please consider citing:
 
-    @article{li2024statistical,
-        title={A Statistical Framework of Watermarks for Large Language Models: {P}ivot, Detection Efficiency and Optimal Rules},
+    @article{li2025statistical,
+        title={A statistical framework of watermarks for large language models: {P}ivot, detection efficiency and optimal rules},
         author={Li, Xiang and Ruan, Feng and Wang, Huiyuan and Long, Qi and Su, Weijie J},
-        journal={arXiv preprint arXiv:2404.01245},
-        year={2024}
+        journal={The Annals of Statistics},
+        volume={53},
+        number={1},
+        pages={322--351},
+        year={2025},
+        publisher={Institute of Mathematical Statistics}
     }
     
 ## Description of directory layouts
