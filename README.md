@@ -36,7 +36,43 @@ If you find this code useful in your research, please consider citing:
     │   └── plot.py                        # Plot the figure in the experiment section
     └── README.md
 
-## Some notes for real data experiments
+## A simple watermark demo script
+
+We recently provide an independent script `watermark_demo.py` that demonstrates watermark generation and detection in a self-contained setup. It does not rely on pre-generated files or saved data and is ideal for quick experimentation or understanding the watermarking process.
+
+### What it does:
+
+* Generates watermarked text using **Gumbel-max sampling** from a specified language model.
+* Computes **pivotal statistics** for each token.
+* Applies several **detection methods**, including:
+
+  * `h_log`
+  * `h_ars`
+  * `h_opt_gum` (based on a theoretically optimal transformation)
+  * `TrGoF` (a robust test proposed in our paper)
+* Plots the **detection power** (true positive rate) versus text length.
+
+### How to run:
+
+```bash
+python watermark_demo.py --temp 0.8 --alpha 0.01 --model gpt2
+```
+
+Available options:
+
+* `--temp`: Sampling temperature (default: 1.0)
+* `--alpha`: Significance level for detection (default: 0.01)
+* `--model`: HuggingFace model name or path (e.g., `facebook/opt-1.3b`, `gpt2`)
+
+The script will automatically:
+
+* Load prompts from the AG News dataset,
+* Generate text continuations using the chosen model,
+* Perform watermark detection,
+* Save the detection power plot.
+
+
+## Some notes for real data experiments in our paper
 
 #### 1\. The pipline:
 
